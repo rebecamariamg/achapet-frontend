@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AchaPet - Cadastro e Adoção</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="cadastro.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-sm">
+        <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-purple-700">
+                🐾 AchaPet
+            </div>
+            <div>
+                <a href="../home/home.html" class="text-gray-600 hover:text-purple-700 px-3 py-2 rounded-md">Home</a>
+                
+                <a href="../adocao/adocao.html" class="text-gray-600 hover:text-purple-700 px-3 py-2 rounded-md">Doa-se</a>
+                
+                <a href="../perdidos/perdidos.html" class="text-gray-600 hover:text-purple-700 px-3 py-2 rounded-md">Perdidos</a>
+                
+                <a href="../cadastro/cadastro.html" class="text-purple-700 font-medium border-b-2 border-purple-700 px-3 py-2">Cadastro</a>
+
+                <a href="../edicao/edicao.html" class="text-gray-600 hover:text-purple-700 px-3 py-2 rounded-md">Edição</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+
+            <div class="md:col-span-1 bg-white p-6 rounded-lg shadow-md h-fit">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Cadastrar Animal</h2>
+                <form id="form-cadastro-animal" class="space-y-8">
+                    <div>
+                        <label for="nome" class="block text-sm font-medium text-gray-700">Nome do Animal</label>
+                        <input type="text" id="nome" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+                    </div>
+                    
+                    <div>
+                        <label for="tipo" class="block text-sm font-medium text-gray-700">Tipo</label>
+                        <select id="tipo" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500 ">
+                            <option value="cachorro">Cachorro</option>
+                            <option value="gato">Gato</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="categoria" class="block text-sm font-medium text-gray-700">Categoria (Status)</label>
+                        <select id="categoria" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+                            <option value="Perdido">Perdido</option>
+                            <option value="Para Adoção">Para Adoção</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="localizacao" class="block text-sm font-medium text-gray-700">Localização (Bairro, Cidade)</label>
+                        <input type="text" id="localizacao" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+                    </div>
+
+                    <div>
+                        <label for="telefone" class="block text-sm font-medium text-gray-700">Telefone de Contato (com DDD)</label>
+                        <input type="tel" id="telefone" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-purple-500 focus:border-purple-500">
+                    </div>
+
+                    <div>
+                        <label for="imagem" class="block text-sm font-medium text-gray-700">Foto do Animal</label>
+                        <input type="file" id="imagem" accept="image/png, image/jpeg" class="mt-1 block w-full text-sm text-gray-500
+                            file:mr-4 file:py-2 file:px-4
+                            file:rounded-full file:border-0
+                            file:text-sm file:font-semibold
+                            file:bg-purple-50 file:text-purple-700
+                            hover:file:bg-purple-100
+                        ">
+                    </div>
+
+                    <button type="submit" class="w-full bg-purple-600 text-white font-bold py-2 px-4 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 transition-colors">
+                        Cadastrar Animal
+                    </button>
+
+                    <div id="feedback-mensagem" class="text-sm text-center mt-4"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
