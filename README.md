@@ -5,7 +5,7 @@
 Interface web do sistema **AchaPet**, responsável por exibir, cadastrar, editar e excluir pets perdidos ou para adoção.
 Conecta diretamente ao backend FastAPI em **[http://127.0.0.1:8000](http://127.0.0.1:8000)**.
 
-Disponível em: https://github.com/rebecamariamg/achapet-backend
+API disponível em: https://github.com/rebecamariamg/achapet-backend
 
 ---
 
